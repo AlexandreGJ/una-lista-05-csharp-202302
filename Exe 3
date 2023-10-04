@@ -1,0 +1,22 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+
+		double [] notas = new double [4];
+		double soma=0;
+		Console.WriteLine("Digite as 4 notas");
+		for ( int i=0;i<notas.Length;i++){
+		notas[i]=double.Parse(Console.ReadLine());
+		soma=soma+notas[i];
+		}
+		double media=soma/4;
+		
+		for ( int i=0;i<notas.Length;i++){
+		Console.WriteLine((i+1)+"º nota: "+notas[i]);
+        } 
+    Console.WriteLine("A media das notas foi: "+media);
+	}
+}
