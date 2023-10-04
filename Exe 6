@@ -1,0 +1,32 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+      int numAlunos = 10;
+        double[] medias = new double[numAlunos];
+        int media7= 0;
+
+        for (int i = 0; i < numAlunos; i++)
+        {
+            double somaNotas = 0;
+
+            for (int j = 0; j < 4; j++)
+            {
+                Console.WriteLine("Digite a nota "+(j + 1)+" do aluno "+(i + 1)+":");
+                double nota = Convert.ToDouble(Console.ReadLine());
+                somaNotas += nota;
+            }
+  
+            medias[i] = somaNotas / 4;
+
+            if (medias[i] >= 7.0)
+            {
+                media7++;
+            }
+        }
+
+        Console.WriteLine(media7+" alunos tiveram média maior ou igual a 7.0.");
+	}
+}
